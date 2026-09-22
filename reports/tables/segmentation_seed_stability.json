@@ -1,0 +1,30 @@
+[
+  {
+    "k": 2,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "n_pairwise_comparisons": 10,
+    "mean_adjusted_rand_index": 0.9921640196544992,
+    "min_adjusted_rand_index": 0.9804100491362482,
+    "scope": "Initialization stability on the same customer snapshot; not resampling stability."
+  },
+  {
+    "k": 3,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "n_pairwise_comparisons": 10,
+    "mean_adjusted_rand_index": 0.9991219784462253,
+    "min_adjusted_rand_index": 0.9985366307437086,
+    "scope": "Initialization stability on the same customer snapshot; not resampling stability."
+  }
+]

@@ -1,0 +1,692 @@
+{
+  "model": "SVM RBF",
+  "paths": {
+    "feature_selection_table": "/Users/charlesleo/.codex/.chatgpt-projects/g-p-6a9d47b8885c8191817a17674c8f26cd/output/capstone-revised/reports/tables/final_feature_selection.csv",
+    "shap_figure": "/Users/charlesleo/.codex/.chatgpt-projects/g-p-6a9d47b8885c8191817a17674c8f26cd/output/capstone-revised/reports/figures/explain_shap.png",
+    "shap_importance_table": "/Users/charlesleo/.codex/.chatgpt-projects/g-p-6a9d47b8885c8191817a17674c8f26cd/output/capstone-revised/reports/tables/final_shap_importance.csv",
+    "pdp_ice_figure": "/Users/charlesleo/.codex/.chatgpt-projects/g-p-6a9d47b8885c8191817a17674c8f26cd/output/capstone-revised/reports/figures/explain_pdp_ice.png",
+    "pdp_table": "/Users/charlesleo/.codex/.chatgpt-projects/g-p-6a9d47b8885c8191817a17674c8f26cd/output/capstone-revised/reports/tables/final_pdp.csv",
+    "summary": "/Users/charlesleo/.codex/.chatgpt-projects/g-p-6a9d47b8885c8191817a17674c8f26cd/output/capstone-revised/reports/explainability_summary.json"
+  },
+  "errors": [],
+  "notes": [
+    "The candidate and policy are frozen. Explanations do not select or retrain either one.",
+    "ANOVA F ranks are univariate fit-data associations, not causal effects or model importance. P-values are descriptive after a model-selection process.",
+    "SHAP uses the selected transformed features. Colour values are on the fitted scaled feature representation; contributions use the stated model-output scale.",
+    "Correlated raw inputs and deterministic engineered features can redistribute attributions and produce implausible perturbations. Interpret ranks cautiously.",
+    "PDP and ICE vary raw Recency and NumWebVisitsMonth through the full fitted pipeline, so derived features remain consistent. Other correlations may still be broken.",
+    "The two PDP fields were specified in advance. A flat curve is a valid finding if the fitted model does not use that field.",
+    "Class weighting and unverified calibration mean a response score is not a verified population response probability. These plots do not establish causal campaign uplift."
+  ],
+  "feature_counts": {
+    "engineered_features": 43,
+    "after_variance_filter": 42,
+    "selected_for_model": 42,
+    "selection_percentile": 100.0
+  },
+  "feature_ranking": [
+    {
+      "feature": "Prev_Accepted",
+      "passed_variance_filter": true,
+      "anova_F": 415.0657807518408,
+      "anova_p_value": 3.6725095434576385e-83,
+      "anova_rank": 1.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "AcceptedCmp5",
+      "passed_variance_filter": true,
+      "anova_F": 232.51825049973564,
+      "anova_p_value": 1.855001988274512e-49,
+      "anova_rank": 2.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "AcceptedCmp1",
+      "passed_variance_filter": true,
+      "anova_F": 160.7680607141002,
+      "anova_p_value": 2.409063489647618e-35,
+      "anova_rank": 3.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Total_Spend",
+      "passed_variance_filter": true,
+      "anova_F": 135.00847256098848,
+      "anova_p_value": 3.835959646097898e-30,
+      "anova_rank": 4.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "AcceptedCmp3",
+      "passed_variance_filter": true,
+      "anova_F": 131.65464045266634,
+      "anova_p_value": 1.8481925929653992e-29,
+      "anova_rank": 5.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Spend_Per_Recorded_Purchase",
+      "passed_variance_filter": true,
+      "anova_F": 128.6707171514502,
+      "anova_p_value": 7.506049073365651e-29,
+      "anova_rank": 6.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "MntWines",
+      "passed_variance_filter": true,
+      "anova_F": 119.86603226670131,
+      "anova_p_value": 4.759514403331343e-27,
+      "anova_rank": 7.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Spend_to_Income_Proxy",
+      "passed_variance_filter": true,
+      "anova_F": 117.99515046039812,
+      "anova_p_value": 1.152648531877379e-26,
+      "anova_rank": 8.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "NumCatalogPurchases",
+      "passed_variance_filter": true,
+      "anova_F": 104.27073748774515,
+      "anova_p_value": 7.812896277668205e-24,
+      "anova_rank": 9.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "MntMeatProducts",
+      "passed_variance_filter": true,
+      "anova_F": 96.51652086335257,
+      "anova_p_value": 3.18355750445595e-22,
+      "anova_rank": 10.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Household_Size_Proxy",
+      "passed_variance_filter": true,
+      "anova_F": 90.88836141829944,
+      "anova_p_value": 4.747774509973113e-21,
+      "anova_rank": 11.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Has_Children_At_Home",
+      "passed_variance_filter": true,
+      "anova_F": 71.09521517638397,
+      "anova_p_value": 6.89584265548229e-17,
+      "anova_rank": 12.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "AcceptedCmp4",
+      "passed_variance_filter": true,
+      "anova_F": 70.68298029924819,
+      "anova_p_value": 8.43101555570856e-17,
+      "anova_rank": 13.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Recency",
+      "passed_variance_filter": true,
+      "anova_F": 69.96564815873633,
+      "anova_p_value": 1.1963004655145918e-16,
+      "anova_rank": 14.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Tenure_Days",
+      "passed_variance_filter": true,
+      "anova_F": 58.959594091131905,
+      "anova_p_value": 2.6280984588055802e-14,
+      "anova_rank": 15.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Children_At_Home",
+      "passed_variance_filter": true,
+      "anova_F": 54.85648098633851,
+      "anova_p_value": 1.9855782033758219e-13,
+      "anova_rank": 16.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Income",
+      "passed_variance_filter": true,
+      "anova_F": 53.849947074238294,
+      "anova_p_value": 3.2642962328597044e-13,
+      "anova_rank": 17.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "AcceptedCmp2",
+      "passed_variance_filter": true,
+      "anova_F": 52.151353180404655,
+      "anova_p_value": 7.560735770273476e-13,
+      "anova_rank": 18.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Total_Purchases",
+      "passed_variance_filter": true,
+      "anova_F": 51.43764268400807,
+      "anova_p_value": 1.076454564021458e-12,
+      "anova_rank": 19.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "NumWebPurchases",
+      "passed_variance_filter": true,
+      "anova_F": 40.62451576760676,
+      "anova_p_value": 2.339965074645526e-10,
+      "anova_rank": 20.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "MntGoldProds",
+      "passed_variance_filter": true,
+      "anova_F": 39.09480461887277,
+      "anova_p_value": 5.03428790871565e-10,
+      "anova_rank": 21.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Has_Partner",
+      "passed_variance_filter": true,
+      "anova_F": 37.134318598249735,
+      "anova_p_value": 1.3465088356936147e-09,
+      "anova_rank": 22.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "MntFruits",
+      "passed_variance_filter": true,
+      "anova_F": 28.18276337020137,
+      "anova_p_value": 1.2411970636951838e-07,
+      "anova_rank": 23.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "MntSweetProducts",
+      "passed_variance_filter": true,
+      "anova_F": 28.036956626369655,
+      "anova_p_value": 1.336761280424863e-07,
+      "anova_rank": 24.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "MntFishProducts",
+      "passed_variance_filter": true,
+      "anova_F": 21.943421102971566,
+      "anova_p_value": 3.0194543802635155e-06,
+      "anova_rank": 25.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Deal_Share_Proxy",
+      "passed_variance_filter": true,
+      "anova_F": 15.04784581296011,
+      "anova_p_value": 0.00010860622926621162,
+      "anova_rank": 26.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Education_PhD",
+      "passed_variance_filter": true,
+      "anova_F": 13.074439838518416,
+      "anova_p_value": 0.000307627508864679,
+      "anova_rank": 27.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Meat_Share",
+      "passed_variance_filter": true,
+      "anova_F": 11.77789554542604,
+      "anova_p_value": 0.0006129903823445919,
+      "anova_rank": 28.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Education_Basic",
+      "passed_variance_filter": true,
+      "anova_F": 5.204937877642335,
+      "anova_p_value": 0.022639591784411238,
+      "anova_rank": 29.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Web_Share",
+      "passed_variance_filter": true,
+      "anova_F": 3.2613275918890627,
+      "anova_p_value": 0.07109931815670711,
+      "anova_rank": 30.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Education_2n_Cycle",
+      "passed_variance_filter": true,
+      "anova_F": 2.9196325322190946,
+      "anova_p_value": 0.08768085622286963,
+      "anova_rank": 31.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Marital_Unknown",
+      "passed_variance_filter": true,
+      "anova_F": 2.064987401611718,
+      "anova_p_value": 0.1508906462171696,
+      "anova_rank": 32.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "NumStorePurchases",
+      "passed_variance_filter": true,
+      "anova_F": 1.9216504085860917,
+      "anova_p_value": 0.1658471898053752,
+      "anova_rank": 33.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Income_missing",
+      "passed_variance_filter": true,
+      "anova_F": 1.4433709759348734,
+      "anova_p_value": 0.22975328917669485,
+      "anova_rank": 34.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "No_Recorded_Purchases",
+      "passed_variance_filter": true,
+      "anova_F": 0.8410983512367538,
+      "anova_p_value": 0.3592061698699698,
+      "anova_rank": 35.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Age",
+      "passed_variance_filter": true,
+      "anova_F": 0.5766614219876661,
+      "anova_p_value": 0.44772374308901075,
+      "anova_rank": 36.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Education_Graduation",
+      "passed_variance_filter": true,
+      "anova_F": 0.5478922260296515,
+      "anova_p_value": 0.4592771202337853,
+      "anova_rank": 37.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Education_Master",
+      "passed_variance_filter": true,
+      "anova_F": 0.4797505249380671,
+      "anova_p_value": 0.4886250364808705,
+      "anova_rank": 38.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "NumDealsPurchases",
+      "passed_variance_filter": true,
+      "anova_F": 0.36069454651461735,
+      "anova_p_value": 0.5481966590496411,
+      "anova_rank": 39.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "NumWebVisitsMonth",
+      "passed_variance_filter": true,
+      "anova_F": 0.32373547789726936,
+      "anova_p_value": 0.5694426221630781,
+      "anova_rank": 40.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Complain",
+      "passed_variance_filter": true,
+      "anova_F": 0.07762149444765797,
+      "anova_p_value": 0.7805790712144851,
+      "anova_rank": 41.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Wine_Share",
+      "passed_variance_filter": true,
+      "anova_F": 0.0377684660255931,
+      "anova_p_value": 0.8459308158161736,
+      "anova_rank": 42.0,
+      "selected_for_model": true,
+      "selection_percentile": 100.0
+    },
+    {
+      "feature": "Education_Unknown",
+      "passed_variance_filter": false,
+      "anova_F": null,
+      "anova_p_value": null,
+      "anova_rank": null,
+      "selected_for_model": false,
+      "selection_percentile": 100.0
+    }
+  ],
+  "shap": {
+    "status": "ok",
+    "method": "KernelExplainer (120 coalition samples per explained row)",
+    "output_scale": "model score (calibration unverified)",
+    "explained_rows": 40,
+    "background_rows": 50,
+    "shap_version": "0.49.1",
+    "warnings": [
+      "RuntimeWarning: divide by zero encountered in matmul",
+      "RuntimeWarning: overflow encountered in matmul",
+      "RuntimeWarning: invalid value encountered in matmul"
+    ]
+  },
+  "shap_importance": [
+    {
+      "feature": "Recency",
+      "mean_abs_SHAP": 0.07408955797157593,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Tenure_Days",
+      "mean_abs_SHAP": 0.03798112436441953,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Wine_Share",
+      "mean_abs_SHAP": 0.03795804731219708,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Has_Partner",
+      "mean_abs_SHAP": 0.03667632500163985,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "NumCatalogPurchases",
+      "mean_abs_SHAP": 0.035863559034390355,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "NumStorePurchases",
+      "mean_abs_SHAP": 0.03457701423056343,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Prev_Accepted",
+      "mean_abs_SHAP": 0.03456030033284179,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "AcceptedCmp3",
+      "mean_abs_SHAP": 0.029571503394404813,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Education_PhD",
+      "mean_abs_SHAP": 0.0288301623221289,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "NumWebVisitsMonth",
+      "mean_abs_SHAP": 0.0280136699669292,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "AcceptedCmp5",
+      "mean_abs_SHAP": 0.024208240848791564,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Deal_Share_Proxy",
+      "mean_abs_SHAP": 0.022753340669353448,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Household_Size_Proxy",
+      "mean_abs_SHAP": 0.02216341371459456,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Has_Children_At_Home",
+      "mean_abs_SHAP": 0.0204648739456239,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Spend_Per_Recorded_Purchase",
+      "mean_abs_SHAP": 0.019747002409135288,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Meat_Share",
+      "mean_abs_SHAP": 0.019707450008124936,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Web_Share",
+      "mean_abs_SHAP": 0.018880321827022623,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Education_Basic",
+      "mean_abs_SHAP": 0.018836987821754227,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Income",
+      "mean_abs_SHAP": 0.018055269615795073,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "MntFishProducts",
+      "mean_abs_SHAP": 0.01617830366118237,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "MntSweetProducts",
+      "mean_abs_SHAP": 0.016050379879139192,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Education_Graduation",
+      "mean_abs_SHAP": 0.013779967391454543,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "MntMeatProducts",
+      "mean_abs_SHAP": 0.013209084135574664,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "AcceptedCmp4",
+      "mean_abs_SHAP": 0.011255674746958414,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "MntFruits",
+      "mean_abs_SHAP": 0.010838568155628623,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "AcceptedCmp2",
+      "mean_abs_SHAP": 0.009707802067294175,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "AcceptedCmp1",
+      "mean_abs_SHAP": 0.009060845761068307,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "MntGoldProds",
+      "mean_abs_SHAP": 0.008963619283949207,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Children_At_Home",
+      "mean_abs_SHAP": 0.008348242666313585,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "NumDealsPurchases",
+      "mean_abs_SHAP": 0.007241894572179342,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Education_2n_Cycle",
+      "mean_abs_SHAP": 0.007126382810086519,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "MntWines",
+      "mean_abs_SHAP": 0.006979043215223961,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Total_Spend",
+      "mean_abs_SHAP": 0.006934170748162299,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "NumWebPurchases",
+      "mean_abs_SHAP": 0.0068134845218811285,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Total_Purchases",
+      "mean_abs_SHAP": 0.006605671640872215,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Education_Master",
+      "mean_abs_SHAP": 0.006256901446802431,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Age",
+      "mean_abs_SHAP": 0.005612800153325823,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Spend_to_Income_Proxy",
+      "mean_abs_SHAP": 0.00527331609039995,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Complain",
+      "mean_abs_SHAP": 0.0,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Income_missing",
+      "mean_abs_SHAP": 0.0,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "No_Recorded_Purchases",
+      "mean_abs_SHAP": 0.0,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    },
+    {
+      "feature": "Marital_Unknown",
+      "mean_abs_SHAP": 0.0,
+      "output_scale": "model score (calibration unverified)",
+      "explained_rows": 40
+    }
+  ],
+  "pdp_ice": {
+    "raw_features": [
+      "Recency",
+      "NumWebVisitsMonth"
+    ],
+    "validation_rows": 441,
+    "ice_rows": 100,
+    "grid_source": "1st to 99th percentiles of fit rows, rounded to integers"
+  }
+}

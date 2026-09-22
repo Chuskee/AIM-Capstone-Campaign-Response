@@ -1,0 +1,9 @@
+{
+  "estimate": "Grouped nested internal validation of the complete model and targeting-policy selection procedure",
+  "historical_data_previously_explored": true,
+  "final_candidate_selection": "Highest inner CV ROC-AUC on a separate final fit partition",
+  "targeting_attribute": "children_at_home, prespecified",
+  "top_fraction_alternative": 0.2,
+  "outer_test_used_for_decision_selection": false,
+  "hyperparameter_configurations_per_algorithm": 8
+}

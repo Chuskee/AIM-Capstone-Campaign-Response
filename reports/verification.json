@@ -1,0 +1,14 @@
+{
+  "executed_code_cells": 18,
+  "execution_errors": 0,
+  "warning_streams": 0,
+  "unit_tests_passed": 17,
+  "outer_groups_disjoint": true,
+  "saved_policy_matches_configuration": true,
+  "saved_segment_assignments_reproduced": true,
+  "raw_data_checksum_verified": true,
+  "shap_status": "ok",
+  "final_candidate": "SVM RBF",
+  "nested_procedure_mean_auc": 0.8919161677698961,
+  "note": "Internal verification, not external performance validation."
+}

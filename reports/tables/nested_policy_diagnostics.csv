@@ -1,0 +1,6 @@
+fold,model,policy_status,alpha,validation_selection_ratio,fit_rows,validation_rows,test_rows
+1,Logistic Regression,target_achieved_on_validation,0.8,0.8221343873517788,1435,357,444
+2,Logistic Regression,target_achieved_on_validation,1.0,0.9878844361602982,1427,352,457
+3,SVM RBF,target_achieved_on_validation,0.9,0.8524590163934426,1438,348,450
+4,XGBoost,target_achieved_on_validation,0.9,0.802207130730051,1445,353,438
+5,XGBoost,target_achieved_on_validation,0.8,0.8034285714285714,1428,361,447

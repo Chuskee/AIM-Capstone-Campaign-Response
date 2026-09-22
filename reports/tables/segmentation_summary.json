@@ -1,0 +1,166 @@
+{
+  "task_type": "Descriptive unsupervised customer segmentation",
+  "n_customers": 2236,
+  "selected_k": 2,
+  "selected_silhouette": 0.21609077178761296,
+  "selection_rule": "Highest silhouette among KMeans k=2..6; ties prefer smaller k. Ward is a diagnostic comparator.",
+  "best_candidate_overall": {
+    "algorithm": "KMeans",
+    "k": 2,
+    "silhouette": 0.21609077178761296
+  },
+  "k3_silhouette": 0.20682349506494374,
+  "features": [
+    "Income",
+    "Age_2014",
+    "Recency",
+    "Tenure_Days",
+    "Total_Spend",
+    "Total_Purchases",
+    "Children_At_Home",
+    "NumDealsPurchases",
+    "NumWebVisitsMonth",
+    "Wine_Spend_Share",
+    "Meat_Spend_Share",
+    "Web_Purchase_Share",
+    "Catalog_Purchase_Share"
+  ],
+  "feature_notes": {
+    "reference_date": "2014-06-30",
+    "reference_date_reason": "Fixed near the last source enrollment date; avoids aging this historical snapshot to the execution year.",
+    "age": "Approximate age: 2014 minus year of birth; exact birthday unavailable.",
+    "currency": "Not specified by the dataset; no currency symbol is assumed.",
+    "log1p_features": [
+      "Income",
+      "Tenure_Days",
+      "Total_Spend",
+      "Total_Purchases",
+      "NumDealsPurchases",
+      "NumWebVisitsMonth"
+    ],
+    "shares": "Within-family spending and purchase-channel shares; zero total means share zero.",
+    "income_missing": "Median-imputed only in the fitted segmentation pipeline; profile income statistics use observed values.",
+    "target_exclusion": "Response and AcceptedCmp variables are excluded from clustering and PCA.",
+    "demographics": "Age, income and children at home influence distances; deployment would require checks on segment-specific offers and outcomes."
+  },
+  "limitations": [
+    "Scores describe structure within this historical snapshot, not generalization to future customers.",
+    "Silhouette is calculated on a fixed random sample of at most 1500 records; other scores use all records.",
+    "Seed stability tests initialization only, not population or time stability.",
+    "KMeans is chosen for assignable operational segments; higher Ward silhouette, if present, must be disclosed.",
+    "Three clusters remain an exploratory alternative; extra marketing value requires a campaign experiment.",
+    "Spending and channel shares can overlap in information with totals; segment sensitivity to features remains a deployment check."
+  ],
+  "stability": [
+    {
+      "k": 2,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "n_pairwise_comparisons": 10,
+      "mean_adjusted_rand_index": 0.9921640196544992,
+      "min_adjusted_rand_index": 0.9804100491362482,
+      "scope": "Initialization stability on the same customer snapshot; not resampling stability."
+    },
+    {
+      "k": 3,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "n_pairwise_comparisons": 10,
+      "mean_adjusted_rand_index": 0.9991219784462253,
+      "min_adjusted_rand_index": 0.9985366307437086,
+      "scope": "Initialization stability on the same customer snapshot; not resampling stability."
+    }
+  ],
+  "pca": {
+    "first_two_explained_variance": 0.4853344779964843,
+    "n_components_90": 8,
+    "explained_variance_ratio": [
+      0.30582179773593043,
+      0.1795126802605539,
+      0.10523474645636154,
+      0.07914208137295664,
+      0.06981578760349504,
+      0.06849278527877166,
+      0.060311748463225255,
+      0.04626877584682599,
+      0.027900531260824236,
+      0.02595021832870494,
+      0.016927628795109412,
+      0.011156473412339602,
+      0.0034647451849014813
+    ],
+    "role": "Descriptive visualization and dimensionality diagnostic; neither clustering nor the classifier is fitted on these two PCs.",
+    "loadings_definition": "PCA component coefficients (unit-length directions), not feature-outcome associations."
+  },
+  "profiles": [
+    {
+      "Cluster": 0,
+      "Customer_Count": 1100,
+      "Customer_Share": 0.4919499106,
+      "Income_mean": 68696.5913682277,
+      "Age_2014_mean": 47.3654545455,
+      "Recency_mean": 49.37,
+      "Tenure_Days_mean": 367.5518181818,
+      "Total_Spend_mean": 1093.4109090909,
+      "Total_Purchases_mean": 18.5663636364,
+      "Children_At_Home_mean": 0.5936363636,
+      "NumDealsPurchases_mean": 2.1718181818,
+      "NumWebVisitsMonth_mean": 3.9227272727,
+      "Wine_Spend_Share_mean": 0.5136438318,
+      "Meat_Spend_Share_mean": 0.2609831347,
+      "Web_Purchase_Share_mean": 0.2989945189,
+      "Catalog_Purchase_Share_mean": 0.2535537856,
+      "Income_median": 68655.0,
+      "Total_Spend_median": 1056.5,
+      "Total_Purchases_median": 18.0,
+      "Observed_Response_Rate": 0.1981818182
+    },
+    {
+      "Cluster": 1,
+      "Customer_Count": 1136,
+      "Customer_Share": 0.5080500894,
+      "Income_mean": 35727.7836153161,
+      "Age_2014_mean": 42.9102112676,
+      "Recency_mean": 48.8705985915,
+      "Tenure_Days_mean": 342.3996478873,
+      "Total_Spend_mean": 134.0088028169,
+      "Total_Purchases_mean": 6.7174295775,
+      "Children_At_Home_mean": 1.2966549296,
+      "NumDealsPurchases_mean": 2.4753521127,
+      "NumWebVisitsMonth_mean": 6.6707746479,
+      "Wine_Spend_Share_mean": 0.4056716677,
+      "Meat_Spend_Share_mean": 0.2384441413,
+      "Web_Purchase_Share_mean": 0.3579203208,
+      "Catalog_Purchase_Share_mean": 0.07790716,
+      "Income_median": 35688.0,
+      "Total_Spend_median": 70.0,
+      "Total_Purchases_median": 6.0,
+      "Observed_Response_Rate": 0.1021126761
+    }
+  ],
+  "files": {
+    "pipeline": "models/customer_segmentation.joblib",
+    "pca_pipeline": "models/customer_segmentation_pca.joblib",
+    "evaluation": "reports/tables/segmentation_comparison.csv",
+    "assignments": "reports/tables/customer_segment_assignments.csv",
+    "profiles": "reports/tables/segment_profiles.csv",
+    "k3_profiles": "reports/tables/segment_profiles_k3_alternative.csv",
+    "stability": "reports/tables/segmentation_seed_stability.json",
+    "pca_variance": "reports/tables/segmentation_pca_variance.csv",
+    "pca_loadings": "reports/tables/segmentation_pca_loadings.csv",
+    "pca_coordinates": "reports/tables/segmentation_pca_coordinates.csv",
+    "comparison_figure": "reports/figures/segmentation_comparison.png",
+    "pca_figure": "reports/figures/segmentation_pca.png",
+    "profiles_figure": "reports/figures/segment_profiles.png"
+  }
+}

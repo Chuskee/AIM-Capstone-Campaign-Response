@@ -1,0 +1,6 @@
+step,rows_remaining
+Raw rows,2240
+Remove exact repeated records,2240
+Eligibility: birth year 1920 to 1996,2237
+Eligibility: positive income below 600000 or missing,2236
+Retain distinct customer IDs and create profile groups,2236

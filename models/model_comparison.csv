@@ -1,0 +1,5 @@
+model,inner_cv_auc,inner_cv_sd,params
+SVM RBF,0.9001323928076633,0.013508524449927922,"{""select__percentile"": 100, ""clf__gamma"": 0.01, ""clf__C"": 1}"
+Logistic Regression,0.8988755395007595,0.012948081606102621,"{""select__percentile"": 100, ""clf__penalty"": ""l1"", ""clf__C"": 0.1}"
+XGBoost,0.8946097351427628,0.007389508756109363,"{""select__percentile"": 80, ""clf__n_estimators"": 300, ""clf__min_child_weight"": 7, ""clf__max_depth"": 2, ""clf__learning_rate"": 0.03}"
+Random Forest,0.8759757062875639,0.010902357891288789,"{""select__percentile"": 80, ""clf__min_samples_leaf"": 8, ""clf__max_features"": 0.7, ""clf__max_depth"": null}"

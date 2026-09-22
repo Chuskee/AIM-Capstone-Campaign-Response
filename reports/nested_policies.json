@@ -1,0 +1,1397 @@
+[
+  {
+    "fold": 1,
+    "selected_model": "Logistic Regression",
+    "policy": {
+      "version": 1,
+      "fit_partition": "validation",
+      "mitigation_axis": "children_at_home",
+      "objective": "global F1 followed by the smallest alpha attaining the pre-specified selection-rate ratio",
+      "global_threshold": 0.798602967297634,
+      "global_validation_f1": 0.6538461538461539,
+      "target_selection_rate": 0.1484593837535014,
+      "target_selection_rate_definition": "overall global-policy validation contact fraction",
+      "parity_floor": 0.8,
+      "quantile_thresholds": {
+        "Children at home": 0.7057841206832586,
+        "No children at home": 0.9329669374859579
+      },
+      "alpha": 0.8,
+      "group_thresholds": {
+        "Children at home": 0.7243478900061338,
+        "No children at home": 0.9060941434482932
+      },
+      "validation_metrics": {
+        "alpha": 0.8,
+        "f1": 0.5333333333333333,
+        "contact_fraction": 0.15126050420168066,
+        "group_selection_rates": {
+          "Children at home": 0.1422924901185771,
+          "No children at home": 0.17307692307692307
+        },
+        "selection_rate_ratio": 0.8221343873517788,
+        "demographic_parity_gap": 0.030784432958345986
+      },
+      "validation_grid": [
+        {
+          "alpha": 0.0,
+          "f1": 0.6538461538461539,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.09486166007905138,
+            "No children at home": 0.27884615384615385
+          },
+          "selection_rate_ratio": 0.3401935395938394,
+          "demographic_parity_gap": 0.18398449376710246
+        },
+        {
+          "alpha": 0.05,
+          "f1": 0.6476190476190476,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.09881422924901186,
+            "No children at home": 0.27884615384615385
+          },
+          "selection_rate_ratio": 0.35436827041024943,
+          "demographic_parity_gap": 0.180031924597142
+        },
+        {
+          "alpha": 0.1,
+          "f1": 0.6407766990291263,
+          "contact_fraction": 0.14565826330532214,
+          "group_selection_rates": {
+            "Children at home": 0.09881422924901186,
+            "No children at home": 0.25961538461538464
+          },
+          "selection_rate_ratio": 0.3806177719221197,
+          "demographic_parity_gap": 0.1608011553663728
+        },
+        {
+          "alpha": 0.15,
+          "f1": 0.6346153846153846,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.10276679841897234,
+            "No children at home": 0.25961538461538464
+          },
+          "selection_rate_ratio": 0.3958424827990045,
+          "demographic_parity_gap": 0.1568485861964123
+        },
+        {
+          "alpha": 0.2,
+          "f1": 0.6285714285714286,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.1067193675889328,
+            "No children at home": 0.25961538461538464
+          },
+          "selection_rate_ratio": 0.4110671936758893,
+          "demographic_parity_gap": 0.15289601702645184
+        },
+        {
+          "alpha": 0.25,
+          "f1": 0.6415094339622641,
+          "contact_fraction": 0.15406162464985995,
+          "group_selection_rates": {
+            "Children at home": 0.11067193675889328,
+            "No children at home": 0.25961538461538464
+          },
+          "selection_rate_ratio": 0.4262919045527741,
+          "demographic_parity_gap": 0.14894344785649136
+        },
+        {
+          "alpha": 0.3,
+          "f1": 0.6415094339622641,
+          "contact_fraction": 0.15406162464985995,
+          "group_selection_rates": {
+            "Children at home": 0.11067193675889328,
+            "No children at home": 0.25961538461538464
+          },
+          "selection_rate_ratio": 0.4262919045527741,
+          "demographic_parity_gap": 0.14894344785649136
+        },
+        {
+          "alpha": 0.35,
+          "f1": 0.6285714285714286,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.11067193675889328,
+            "No children at home": 0.25
+          },
+          "selection_rate_ratio": 0.4426877470355731,
+          "demographic_parity_gap": 0.13932806324110672
+        },
+        {
+          "alpha": 0.4,
+          "f1": 0.6095238095238096,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.11462450592885376,
+            "No children at home": 0.2403846153846154
+          },
+          "selection_rate_ratio": 0.4768379446640316,
+          "demographic_parity_gap": 0.12576010945576163
+        },
+        {
+          "alpha": 0.45,
+          "f1": 0.6095238095238096,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.11462450592885376,
+            "No children at home": 0.2403846153846154
+          },
+          "selection_rate_ratio": 0.4768379446640316,
+          "demographic_parity_gap": 0.12576010945576163
+        },
+        {
+          "alpha": 0.5,
+          "f1": 0.5961538461538461,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.11462450592885376,
+            "No children at home": 0.23076923076923078
+          },
+          "selection_rate_ratio": 0.49670619235836627,
+          "demographic_parity_gap": 0.11614472484037702
+        },
+        {
+          "alpha": 0.55,
+          "f1": 0.5961538461538461,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.11462450592885376,
+            "No children at home": 0.23076923076923078
+          },
+          "selection_rate_ratio": 0.49670619235836627,
+          "demographic_parity_gap": 0.11614472484037702
+        },
+        {
+          "alpha": 0.6,
+          "f1": 0.5961538461538461,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.11462450592885376,
+            "No children at home": 0.23076923076923078
+          },
+          "selection_rate_ratio": 0.49670619235836627,
+          "demographic_parity_gap": 0.11614472484037702
+        },
+        {
+          "alpha": 0.65,
+          "f1": 0.5660377358490566,
+          "contact_fraction": 0.15406162464985995,
+          "group_selection_rates": {
+            "Children at home": 0.12648221343873517,
+            "No children at home": 0.22115384615384615
+          },
+          "selection_rate_ratio": 0.571919573809933,
+          "demographic_parity_gap": 0.09467163271511098
+        },
+        {
+          "alpha": 0.7,
+          "f1": 0.5576923076923077,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.13043478260869565,
+            "No children at home": 0.19230769230769232
+          },
+          "selection_rate_ratio": 0.6782608695652174,
+          "demographic_parity_gap": 0.06187290969899667
+        },
+        {
+          "alpha": 0.75,
+          "f1": 0.5384615384615384,
+          "contact_fraction": 0.1484593837535014,
+          "group_selection_rates": {
+            "Children at home": 0.13438735177865613,
+            "No children at home": 0.18269230769230768
+          },
+          "selection_rate_ratio": 0.7355939255252757,
+          "demographic_parity_gap": 0.048304955913651554
+        },
+        {
+          "alpha": 0.8,
+          "f1": 0.5333333333333333,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.1422924901185771,
+            "No children at home": 0.17307692307692307
+          },
+          "selection_rate_ratio": 0.8221343873517788,
+          "demographic_parity_gap": 0.030784432958345986
+        },
+        {
+          "alpha": 0.85,
+          "f1": 0.5333333333333333,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.14624505928853754,
+            "No children at home": 0.16346153846153846
+          },
+          "selection_rate_ratio": 0.8946756568239943,
+          "demographic_parity_gap": 0.017216479173000926
+        },
+        {
+          "alpha": 0.9,
+          "f1": 0.5283018867924528,
+          "contact_fraction": 0.15406162464985995,
+          "group_selection_rates": {
+            "Children at home": 0.15019762845849802,
+            "No children at home": 0.16346153846153846
+          },
+          "selection_rate_ratio": 0.9188560799813996,
+          "demographic_parity_gap": 0.013263910003040447
+        },
+        {
+          "alpha": 0.95,
+          "f1": 0.5333333333333333,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.15019762845849802,
+            "No children at home": 0.15384615384615385
+          },
+          "selection_rate_ratio": 0.9762845849802371,
+          "demographic_parity_gap": 0.0036485253876558377
+        },
+        {
+          "alpha": 1.0,
+          "f1": 0.5333333333333333,
+          "contact_fraction": 0.15126050420168066,
+          "group_selection_rates": {
+            "Children at home": 0.15019762845849802,
+            "No children at home": 0.15384615384615385
+          },
+          "selection_rate_ratio": 0.9762845849802371,
+          "demographic_parity_gap": 0.0036485253876558377
+        }
+      ],
+      "status": "target_achieved_on_validation",
+      "unseen_group_handling": "error; manual review or prospectively validated fallback required",
+      "limitation": "Selection parity does not establish equalised odds, causal fairness, or regulatory compliance."
+    },
+    "income_edges": [
+      35726.5,
+      51315.0,
+      68695.0
+    ],
+    "fit_rows": 1435,
+    "validation_rows": 357,
+    "test_rows": 444
+  },
+  {
+    "fold": 2,
+    "selected_model": "Logistic Regression",
+    "policy": {
+      "version": 1,
+      "fit_partition": "validation",
+      "mitigation_axis": "children_at_home",
+      "objective": "global F1 followed by the smallest alpha attaining the pre-specified selection-rate ratio",
+      "global_threshold": 0.7524093266517542,
+      "global_validation_f1": 0.6078431372549019,
+      "target_selection_rate": 0.13920454545454544,
+      "target_selection_rate_definition": "overall global-policy validation contact fraction",
+      "parity_floor": 0.8,
+      "quantile_thresholds": {
+        "Children at home": 0.4942568964752556,
+        "No children at home": 0.8683339886714854
+      },
+      "alpha": 1.0,
+      "group_thresholds": {
+        "Children at home": 0.4942568964752556,
+        "No children at home": 0.8683339886714854
+      },
+      "validation_metrics": {
+        "alpha": 1.0,
+        "f1": 0.49019607843137253,
+        "contact_fraction": 0.13920454545454544,
+        "group_selection_rates": {
+          "Children at home": 0.13962264150943396,
+          "No children at home": 0.13793103448275862
+        },
+        "selection_rate_ratio": 0.9878844361602982,
+        "demographic_parity_gap": 0.0016916070266753402
+      },
+      "validation_grid": [
+        {
+          "alpha": 0.0,
+          "f1": 0.6078431372549019,
+          "contact_fraction": 0.13920454545454544,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.3333333333333333
+          },
+          "selection_rate_ratio": 0.22641509433962265,
+          "demographic_parity_gap": 0.2578616352201258
+        },
+        {
+          "alpha": 0.05,
+          "f1": 0.58,
+          "contact_fraction": 0.13352272727272727,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.3103448275862069
+          },
+          "selection_rate_ratio": 0.2431865828092243,
+          "demographic_parity_gap": 0.23487312947299938
+        },
+        {
+          "alpha": 0.1,
+          "f1": 0.58,
+          "contact_fraction": 0.13352272727272727,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.3103448275862069
+          },
+          "selection_rate_ratio": 0.2431865828092243,
+          "demographic_parity_gap": 0.23487312947299938
+        },
+        {
+          "alpha": 0.15,
+          "f1": 0.5858585858585859,
+          "contact_fraction": 0.13068181818181818,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.2988505747126437
+          },
+          "selection_rate_ratio": 0.2525399129172714,
+          "demographic_parity_gap": 0.22337887659943617
+        },
+        {
+          "alpha": 0.2,
+          "f1": 0.5858585858585859,
+          "contact_fraction": 0.13068181818181818,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.2988505747126437
+          },
+          "selection_rate_ratio": 0.2525399129172714,
+          "demographic_parity_gap": 0.22337887659943617
+        },
+        {
+          "alpha": 0.25,
+          "f1": 0.5858585858585859,
+          "contact_fraction": 0.13068181818181818,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.2988505747126437
+          },
+          "selection_rate_ratio": 0.2525399129172714,
+          "demographic_parity_gap": 0.22337887659943617
+        },
+        {
+          "alpha": 0.3,
+          "f1": 0.5773195876288659,
+          "contact_fraction": 0.125,
+          "group_selection_rates": {
+            "Children at home": 0.07547169811320754,
+            "No children at home": 0.27586206896551724
+          },
+          "selection_rate_ratio": 0.27358490566037735,
+          "demographic_parity_gap": 0.2003903708523097
+        },
+        {
+          "alpha": 0.35,
+          "f1": 0.5714285714285714,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.07924528301886792,
+            "No children at home": 0.27586206896551724
+          },
+          "selection_rate_ratio": 0.2872641509433962,
+          "demographic_parity_gap": 0.19661678594664933
+        },
+        {
+          "alpha": 0.4,
+          "f1": 0.5714285714285714,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.07924528301886792,
+            "No children at home": 0.27586206896551724
+          },
+          "selection_rate_ratio": 0.2872641509433962,
+          "demographic_parity_gap": 0.19661678594664933
+        },
+        {
+          "alpha": 0.45,
+          "f1": 0.56,
+          "contact_fraction": 0.13352272727272727,
+          "group_selection_rates": {
+            "Children at home": 0.08679245283018867,
+            "No children at home": 0.27586206896551724
+          },
+          "selection_rate_ratio": 0.3146226415094339,
+          "demographic_parity_gap": 0.18906961613532858
+        },
+        {
+          "alpha": 0.5,
+          "f1": 0.5510204081632653,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.08679245283018867,
+            "No children at home": 0.25287356321839083
+          },
+          "selection_rate_ratio": 0.34322469982847337,
+          "demographic_parity_gap": 0.16608111038820217
+        },
+        {
+          "alpha": 0.55,
+          "f1": 0.5510204081632653,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.08679245283018867,
+            "No children at home": 0.25287356321839083
+          },
+          "selection_rate_ratio": 0.34322469982847337,
+          "demographic_parity_gap": 0.16608111038820217
+        },
+        {
+          "alpha": 0.6,
+          "f1": 0.5306122448979592,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.09433962264150944,
+            "No children at home": 0.22988505747126436
+          },
+          "selection_rate_ratio": 0.41037735849056606,
+          "demographic_parity_gap": 0.13554543482975492
+        },
+        {
+          "alpha": 0.65,
+          "f1": 0.5306122448979592,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.09811320754716982,
+            "No children at home": 0.21839080459770116
+          },
+          "selection_rate_ratio": 0.44925521350546177,
+          "demographic_parity_gap": 0.12027759705053134
+        },
+        {
+          "alpha": 0.7,
+          "f1": 0.5306122448979592,
+          "contact_fraction": 0.1278409090909091,
+          "group_selection_rates": {
+            "Children at home": 0.09811320754716982,
+            "No children at home": 0.21839080459770116
+          },
+          "selection_rate_ratio": 0.44925521350546177,
+          "demographic_parity_gap": 0.12027759705053134
+        },
+        {
+          "alpha": 0.75,
+          "f1": 0.56,
+          "contact_fraction": 0.13352272727272727,
+          "group_selection_rates": {
+            "Children at home": 0.11320754716981132,
+            "No children at home": 0.19540229885057472
+          },
+          "selection_rate_ratio": 0.5793562708102109,
+          "demographic_parity_gap": 0.0821947516807634
+        },
+        {
+          "alpha": 0.8,
+          "f1": 0.5346534653465347,
+          "contact_fraction": 0.13636363636363635,
+          "group_selection_rates": {
+            "Children at home": 0.12075471698113208,
+            "No children at home": 0.1839080459770115
+          },
+          "selection_rate_ratio": 0.6566037735849056,
+          "demographic_parity_gap": 0.06315332899587942
+        },
+        {
+          "alpha": 0.85,
+          "f1": 0.5294117647058824,
+          "contact_fraction": 0.13920454545454544,
+          "group_selection_rates": {
+            "Children at home": 0.12452830188679245,
+            "No children at home": 0.1839080459770115
+          },
+          "selection_rate_ratio": 0.677122641509434,
+          "demographic_parity_gap": 0.05937974409021904
+        },
+        {
+          "alpha": 0.9,
+          "f1": 0.5048543689320388,
+          "contact_fraction": 0.14204545454545456,
+          "group_selection_rates": {
+            "Children at home": 0.1320754716981132,
+            "No children at home": 0.1724137931034483
+          },
+          "selection_rate_ratio": 0.7660377358490565,
+          "demographic_parity_gap": 0.04033832140533508
+        },
+        {
+          "alpha": 0.95,
+          "f1": 0.5048543689320388,
+          "contact_fraction": 0.14204545454545456,
+          "group_selection_rates": {
+            "Children at home": 0.1320754716981132,
+            "No children at home": 0.1724137931034483
+          },
+          "selection_rate_ratio": 0.7660377358490565,
+          "demographic_parity_gap": 0.04033832140533508
+        },
+        {
+          "alpha": 1.0,
+          "f1": 0.49019607843137253,
+          "contact_fraction": 0.13920454545454544,
+          "group_selection_rates": {
+            "Children at home": 0.13962264150943396,
+            "No children at home": 0.13793103448275862
+          },
+          "selection_rate_ratio": 0.9878844361602982,
+          "demographic_parity_gap": 0.0016916070266753402
+        }
+      ],
+      "status": "target_achieved_on_validation",
+      "unseen_group_handling": "error; manual review or prospectively validated fallback required",
+      "limitation": "Selection parity does not establish equalised odds, causal fairness, or regulatory compliance."
+    },
+    "income_edges": [
+      34445.0,
+      51369.0,
+      67445.0
+    ],
+    "fit_rows": 1427,
+    "validation_rows": 352,
+    "test_rows": 457
+  },
+  {
+    "fold": 3,
+    "selected_model": "SVM RBF",
+    "policy": {
+      "version": 1,
+      "fit_partition": "validation",
+      "mitigation_axis": "children_at_home",
+      "objective": "global F1 followed by the smallest alpha attaining the pre-specified selection-rate ratio",
+      "global_threshold": 0.5197684013703745,
+      "global_validation_f1": 0.5909090909090909,
+      "target_selection_rate": 0.11494252873563218,
+      "target_selection_rate_definition": "overall global-policy validation contact fraction",
+      "parity_floor": 0.8,
+      "quantile_thresholds": {
+        "Children at home": 0.39776310504280044,
+        "No children at home": 0.7863102728485126
+      },
+      "alpha": 0.9,
+      "group_thresholds": {
+        "Children at home": 0.40996363467555785,
+        "No children at home": 0.7596560857006988
+      },
+      "validation_metrics": {
+        "alpha": 0.9,
+        "f1": 0.41379310344827586,
+        "contact_fraction": 0.11206896551724138,
+        "group_selection_rates": {
+          "Children at home": 0.10655737704918032,
+          "No children at home": 0.125
+        },
+        "selection_rate_ratio": 0.8524590163934426,
+        "demographic_parity_gap": 0.01844262295081968
+      },
+      "validation_grid": [
+        {
+          "alpha": 0.0,
+          "f1": 0.5909090909090909,
+          "contact_fraction": 0.11494252873563218,
+          "group_selection_rates": {
+            "Children at home": 0.06147540983606557,
+            "No children at home": 0.2403846153846154
+          },
+          "selection_rate_ratio": 0.25573770491803277,
+          "demographic_parity_gap": 0.17890920554854983
+        },
+        {
+          "alpha": 0.05,
+          "f1": 0.5813953488372093,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.06147540983606557,
+            "No children at home": 0.22115384615384615
+          },
+          "selection_rate_ratio": 0.27797576621525305,
+          "demographic_parity_gap": 0.15967843631778056
+        },
+        {
+          "alpha": 0.1,
+          "f1": 0.5581395348837209,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.06557377049180328,
+            "No children at home": 0.21153846153846154
+          },
+          "selection_rate_ratio": 0.3099850968703428,
+          "demographic_parity_gap": 0.14596469104665827
+        },
+        {
+          "alpha": 0.15,
+          "f1": 0.5581395348837209,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.06557377049180328,
+            "No children at home": 0.21153846153846154
+          },
+          "selection_rate_ratio": 0.3099850968703428,
+          "demographic_parity_gap": 0.14596469104665827
+        },
+        {
+          "alpha": 0.2,
+          "f1": 0.5517241379310345,
+          "contact_fraction": 0.11206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.06967213114754098,
+            "No children at home": 0.21153846153846154
+          },
+          "selection_rate_ratio": 0.3293591654247392,
+          "demographic_parity_gap": 0.14186633039092056
+        },
+        {
+          "alpha": 0.25,
+          "f1": 0.5348837209302325,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.06967213114754098,
+            "No children at home": 0.20192307692307693
+          },
+          "selection_rate_ratio": 0.34504293520686957,
+          "demographic_parity_gap": 0.13225094577553595
+        },
+        {
+          "alpha": 0.3,
+          "f1": 0.5116279069767442,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.07377049180327869,
+            "No children at home": 0.19230769230769232
+          },
+          "selection_rate_ratio": 0.38360655737704913,
+          "demographic_parity_gap": 0.11853720050441363
+        },
+        {
+          "alpha": 0.35,
+          "f1": 0.5057471264367817,
+          "contact_fraction": 0.11206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.08196721311475409,
+            "No children at home": 0.18269230769230768
+          },
+          "selection_rate_ratio": 0.4486626402070751,
+          "demographic_parity_gap": 0.10072509457755359
+        },
+        {
+          "alpha": 0.4,
+          "f1": 0.4888888888888889,
+          "contact_fraction": 0.1206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.0942622950819672,
+            "No children at home": 0.18269230769230768
+          },
+          "selection_rate_ratio": 0.5159620362381363,
+          "demographic_parity_gap": 0.08843001261034047
+        },
+        {
+          "alpha": 0.45,
+          "f1": 0.4888888888888889,
+          "contact_fraction": 0.1206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.0942622950819672,
+            "No children at home": 0.18269230769230768
+          },
+          "selection_rate_ratio": 0.5159620362381363,
+          "demographic_parity_gap": 0.08843001261034047
+        },
+        {
+          "alpha": 0.5,
+          "f1": 0.4888888888888889,
+          "contact_fraction": 0.1206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.0942622950819672,
+            "No children at home": 0.18269230769230768
+          },
+          "selection_rate_ratio": 0.5159620362381363,
+          "demographic_parity_gap": 0.08843001261034047
+        },
+        {
+          "alpha": 0.55,
+          "f1": 0.4666666666666667,
+          "contact_fraction": 0.1206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.09836065573770492,
+            "No children at home": 0.17307692307692307
+          },
+          "selection_rate_ratio": 0.5683060109289617,
+          "demographic_parity_gap": 0.07471626733921816
+        },
+        {
+          "alpha": 0.6,
+          "f1": 0.449438202247191,
+          "contact_fraction": 0.11781609195402298,
+          "group_selection_rates": {
+            "Children at home": 0.09836065573770492,
+            "No children at home": 0.16346153846153846
+          },
+          "selection_rate_ratio": 0.6017357762777242,
+          "demographic_parity_gap": 0.06510088272383355
+        },
+        {
+          "alpha": 0.65,
+          "f1": 0.45454545454545453,
+          "contact_fraction": 0.11494252873563218,
+          "group_selection_rates": {
+            "Children at home": 0.09836065573770492,
+            "No children at home": 0.15384615384615385
+          },
+          "selection_rate_ratio": 0.6393442622950819,
+          "demographic_parity_gap": 0.05548549810844894
+        },
+        {
+          "alpha": 0.7,
+          "f1": 0.4418604651162791,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.09836065573770492,
+            "No children at home": 0.1346153846153846
+          },
+          "selection_rate_ratio": 0.7306791569086651,
+          "demographic_parity_gap": 0.03625472887767969
+        },
+        {
+          "alpha": 0.75,
+          "f1": 0.4418604651162791,
+          "contact_fraction": 0.10919540229885058,
+          "group_selection_rates": {
+            "Children at home": 0.09836065573770492,
+            "No children at home": 0.1346153846153846
+          },
+          "selection_rate_ratio": 0.7306791569086651,
+          "demographic_parity_gap": 0.03625472887767969
+        },
+        {
+          "alpha": 0.8,
+          "f1": 0.4367816091954023,
+          "contact_fraction": 0.11206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.10245901639344263,
+            "No children at home": 0.1346153846153846
+          },
+          "selection_rate_ratio": 0.7611241217798596,
+          "demographic_parity_gap": 0.03215636822194198
+        },
+        {
+          "alpha": 0.85,
+          "f1": 0.4318181818181818,
+          "contact_fraction": 0.11494252873563218,
+          "group_selection_rates": {
+            "Children at home": 0.10655737704918032,
+            "No children at home": 0.1346153846153846
+          },
+          "selection_rate_ratio": 0.7915690866510539,
+          "demographic_parity_gap": 0.028058007566204288
+        },
+        {
+          "alpha": 0.9,
+          "f1": 0.41379310344827586,
+          "contact_fraction": 0.11206896551724138,
+          "group_selection_rates": {
+            "Children at home": 0.10655737704918032,
+            "No children at home": 0.125
+          },
+          "selection_rate_ratio": 0.8524590163934426,
+          "demographic_parity_gap": 0.01844262295081968
+        },
+        {
+          "alpha": 0.95,
+          "f1": 0.449438202247191,
+          "contact_fraction": 0.11781609195402298,
+          "group_selection_rates": {
+            "Children at home": 0.11475409836065574,
+            "No children at home": 0.125
+          },
+          "selection_rate_ratio": 0.9180327868852459,
+          "demographic_parity_gap": 0.01024590163934426
+        },
+        {
+          "alpha": 1.0,
+          "f1": 0.4318181818181818,
+          "contact_fraction": 0.11494252873563218,
+          "group_selection_rates": {
+            "Children at home": 0.11475409836065574,
+            "No children at home": 0.11538461538461539
+          },
+          "selection_rate_ratio": 0.994535519125683,
+          "demographic_parity_gap": 0.0006305170239596508
+        }
+      ],
+      "status": "target_achieved_on_validation",
+      "unseen_group_handling": "error; manual review or prospectively validated fallback required",
+      "limitation": "Selection parity does not establish equalised odds, causal fairness, or regulatory compliance."
+    },
+    "income_edges": [
+      36038.25,
+      52137.0,
+      68774.25
+    ],
+    "fit_rows": 1438,
+    "validation_rows": 348,
+    "test_rows": 450
+  },
+  {
+    "fold": 4,
+    "selected_model": "XGBoost",
+    "policy": {
+      "version": 1,
+      "fit_partition": "validation",
+      "mitigation_axis": "children_at_home",
+      "objective": "global F1 followed by the smallest alpha attaining the pre-specified selection-rate ratio",
+      "global_threshold": 0.595530092716217,
+      "global_validation_f1": 0.7567567567567568,
+      "target_selection_rate": 0.1529745042492918,
+      "target_selection_rate_definition": "overall global-policy validation contact fraction",
+      "parity_floor": 0.8,
+      "quantile_thresholds": {
+        "Children at home": 0.4705901939537977,
+        "No children at home": 0.861621373942486
+      },
+      "alpha": 0.9,
+      "group_thresholds": {
+        "Children at home": 0.4830841838300396,
+        "No children at home": 0.835012245819859
+      },
+      "validation_metrics": {
+        "alpha": 0.9,
+        "f1": 0.6071428571428571,
+        "contact_fraction": 0.1558073654390935,
+        "group_selection_rates": {
+          "Children at home": 0.14516129032258066,
+          "No children at home": 0.18095238095238095
+        },
+        "selection_rate_ratio": 0.802207130730051,
+        "demographic_parity_gap": 0.03579109062980029
+      },
+      "validation_grid": [
+        {
+          "alpha": 0.0,
+          "f1": 0.7567567567567568,
+          "contact_fraction": 0.1529745042492918,
+          "group_selection_rates": {
+            "Children at home": 0.07258064516129033,
+            "No children at home": 0.34285714285714286
+          },
+          "selection_rate_ratio": 0.21169354838709678,
+          "demographic_parity_gap": 0.27027649769585255
+        },
+        {
+          "alpha": 0.05,
+          "f1": 0.7454545454545455,
+          "contact_fraction": 0.1501416430594901,
+          "group_selection_rates": {
+            "Children at home": 0.07258064516129033,
+            "No children at home": 0.3333333333333333
+          },
+          "selection_rate_ratio": 0.217741935483871,
+          "demographic_parity_gap": 0.260752688172043
+        },
+        {
+          "alpha": 0.1,
+          "f1": 0.7476635514018691,
+          "contact_fraction": 0.141643059490085,
+          "group_selection_rates": {
+            "Children at home": 0.07258064516129033,
+            "No children at home": 0.3047619047619048
+          },
+          "selection_rate_ratio": 0.23815524193548387,
+          "demographic_parity_gap": 0.23218125960061448
+        },
+        {
+          "alpha": 0.15,
+          "f1": 0.7407407407407407,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.08064516129032258,
+            "No children at home": 0.29523809523809524
+          },
+          "selection_rate_ratio": 0.27315296566077,
+          "demographic_parity_gap": 0.21459293394777268
+        },
+        {
+          "alpha": 0.2,
+          "f1": 0.7407407407407407,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.08064516129032258,
+            "No children at home": 0.29523809523809524
+          },
+          "selection_rate_ratio": 0.27315296566077,
+          "demographic_parity_gap": 0.21459293394777268
+        },
+        {
+          "alpha": 0.25,
+          "f1": 0.7407407407407407,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.08064516129032258,
+            "No children at home": 0.29523809523809524
+          },
+          "selection_rate_ratio": 0.27315296566077,
+          "demographic_parity_gap": 0.21459293394777268
+        },
+        {
+          "alpha": 0.3,
+          "f1": 0.6972477064220184,
+          "contact_fraction": 0.14730878186968838,
+          "group_selection_rates": {
+            "Children at home": 0.09274193548387097,
+            "No children at home": 0.2761904761904762
+          },
+          "selection_rate_ratio": 0.335789766407119,
+          "demographic_parity_gap": 0.18344854070660524
+        },
+        {
+          "alpha": 0.35,
+          "f1": 0.7037037037037037,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.09274193548387097,
+            "No children at home": 0.26666666666666666
+          },
+          "selection_rate_ratio": 0.3477822580645161,
+          "demographic_parity_gap": 0.1739247311827957
+        },
+        {
+          "alpha": 0.4,
+          "f1": 0.7037037037037037,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.09274193548387097,
+            "No children at home": 0.26666666666666666
+          },
+          "selection_rate_ratio": 0.3477822580645161,
+          "demographic_parity_gap": 0.1739247311827957
+        },
+        {
+          "alpha": 0.45,
+          "f1": 0.6909090909090909,
+          "contact_fraction": 0.1501416430594901,
+          "group_selection_rates": {
+            "Children at home": 0.10080645161290322,
+            "No children at home": 0.26666666666666666
+          },
+          "selection_rate_ratio": 0.37802419354838707,
+          "demographic_parity_gap": 0.16586021505376344
+        },
+        {
+          "alpha": 0.5,
+          "f1": 0.6909090909090909,
+          "contact_fraction": 0.1501416430594901,
+          "group_selection_rates": {
+            "Children at home": 0.10080645161290322,
+            "No children at home": 0.26666666666666666
+          },
+          "selection_rate_ratio": 0.37802419354838707,
+          "demographic_parity_gap": 0.16586021505376344
+        },
+        {
+          "alpha": 0.55,
+          "f1": 0.6972477064220184,
+          "contact_fraction": 0.14730878186968838,
+          "group_selection_rates": {
+            "Children at home": 0.10080645161290322,
+            "No children at home": 0.2571428571428571
+          },
+          "selection_rate_ratio": 0.3920250896057348,
+          "demographic_parity_gap": 0.1563364055299539
+        },
+        {
+          "alpha": 0.6,
+          "f1": 0.7027027027027027,
+          "contact_fraction": 0.1529745042492918,
+          "group_selection_rates": {
+            "Children at home": 0.10887096774193548,
+            "No children at home": 0.2571428571428571
+          },
+          "selection_rate_ratio": 0.4233870967741936,
+          "demographic_parity_gap": 0.14827188940092162
+        },
+        {
+          "alpha": 0.65,
+          "f1": 0.6851851851851852,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.10887096774193548,
+            "No children at home": 0.22857142857142856
+          },
+          "selection_rate_ratio": 0.47631048387096775,
+          "demographic_parity_gap": 0.11970046082949308
+        },
+        {
+          "alpha": 0.7,
+          "f1": 0.6666666666666666,
+          "contact_fraction": 0.14447592067988668,
+          "group_selection_rates": {
+            "Children at home": 0.11290322580645161,
+            "No children at home": 0.21904761904761905
+          },
+          "selection_rate_ratio": 0.5154277699859747,
+          "demographic_parity_gap": 0.10614439324116744
+        },
+        {
+          "alpha": 0.75,
+          "f1": 0.6422018348623854,
+          "contact_fraction": 0.14730878186968838,
+          "group_selection_rates": {
+            "Children at home": 0.125,
+            "No children at home": 0.2
+          },
+          "selection_rate_ratio": 0.625,
+          "demographic_parity_gap": 0.07500000000000001
+        },
+        {
+          "alpha": 0.8,
+          "f1": 0.6363636363636364,
+          "contact_fraction": 0.1501416430594901,
+          "group_selection_rates": {
+            "Children at home": 0.12903225806451613,
+            "No children at home": 0.2
+          },
+          "selection_rate_ratio": 0.6451612903225806,
+          "demographic_parity_gap": 0.07096774193548389
+        },
+        {
+          "alpha": 0.85,
+          "f1": 0.6126126126126126,
+          "contact_fraction": 0.1529745042492918,
+          "group_selection_rates": {
+            "Children at home": 0.13709677419354838,
+            "No children at home": 0.19047619047619047
+          },
+          "selection_rate_ratio": 0.719758064516129,
+          "demographic_parity_gap": 0.05337941628264209
+        },
+        {
+          "alpha": 0.9,
+          "f1": 0.6071428571428571,
+          "contact_fraction": 0.1558073654390935,
+          "group_selection_rates": {
+            "Children at home": 0.14516129032258066,
+            "No children at home": 0.18095238095238095
+          },
+          "selection_rate_ratio": 0.802207130730051,
+          "demographic_parity_gap": 0.03579109062980029
+        },
+        {
+          "alpha": 0.95,
+          "f1": 0.6071428571428571,
+          "contact_fraction": 0.1558073654390935,
+          "group_selection_rates": {
+            "Children at home": 0.14919354838709678,
+            "No children at home": 0.17142857142857143
+          },
+          "selection_rate_ratio": 0.8702956989247312,
+          "demographic_parity_gap": 0.02223502304147465
+        },
+        {
+          "alpha": 1.0,
+          "f1": 0.5945945945945946,
+          "contact_fraction": 0.1529745042492918,
+          "group_selection_rates": {
+            "Children at home": 0.1532258064516129,
+            "No children at home": 0.1523809523809524
+          },
+          "selection_rate_ratio": 0.9944862155388472,
+          "demographic_parity_gap": 0.0008448540706605112
+        }
+      ],
+      "status": "target_achieved_on_validation",
+      "unseen_group_handling": "error; manual review or prospectively validated fallback required",
+      "limitation": "Selection parity does not establish equalised odds, causal fairness, or regulatory compliance."
+    },
+    "income_edges": [
+      35613.0,
+      50611.0,
+      68487.0
+    ],
+    "fit_rows": 1445,
+    "validation_rows": 353,
+    "test_rows": 438
+  },
+  {
+    "fold": 5,
+    "selected_model": "XGBoost",
+    "policy": {
+      "version": 1,
+      "fit_partition": "validation",
+      "mitigation_axis": "children_at_home",
+      "objective": "global F1 followed by the smallest alpha attaining the pre-specified selection-rate ratio",
+      "global_threshold": 0.6183574795722961,
+      "global_validation_f1": 0.6551724137931034,
+      "target_selection_rate": 0.16620498614958448,
+      "target_selection_rate_definition": "overall global-policy validation contact fraction",
+      "parity_floor": 0.8,
+      "quantile_thresholds": {
+        "Children at home": 0.4585233936679662,
+        "No children at home": 0.8084195143958538
+      },
+      "alpha": 0.8,
+      "group_thresholds": {
+        "Children at home": 0.49049021084883215,
+        "No children at home": 0.7704071074311423
+      },
+      "validation_metrics": {
+        "alpha": 0.8,
+        "f1": 0.6086956521739131,
+        "contact_fraction": 0.1634349030470914,
+        "group_selection_rates": {
+          "Children at home": 0.152,
+          "No children at home": 0.1891891891891892
+        },
+        "selection_rate_ratio": 0.8034285714285714,
+        "demographic_parity_gap": 0.0371891891891892
+      },
+      "validation_grid": [
+        {
+          "alpha": 0.0,
+          "f1": 0.6551724137931034,
+          "contact_fraction": 0.16620498614958448,
+          "group_selection_rates": {
+            "Children at home": 0.116,
+            "No children at home": 0.27927927927927926
+          },
+          "selection_rate_ratio": 0.4153548387096775,
+          "demographic_parity_gap": 0.16327927927927927
+        },
+        {
+          "alpha": 0.05,
+          "f1": 0.6551724137931034,
+          "contact_fraction": 0.16620498614958448,
+          "group_selection_rates": {
+            "Children at home": 0.116,
+            "No children at home": 0.27927927927927926
+          },
+          "selection_rate_ratio": 0.4153548387096775,
+          "demographic_parity_gap": 0.16327927927927927
+        },
+        {
+          "alpha": 0.1,
+          "f1": 0.6495726495726496,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.12,
+            "No children at home": 0.27927927927927926
+          },
+          "selection_rate_ratio": 0.4296774193548387,
+          "demographic_parity_gap": 0.15927927927927926
+        },
+        {
+          "alpha": 0.15,
+          "f1": 0.6440677966101694,
+          "contact_fraction": 0.17174515235457063,
+          "group_selection_rates": {
+            "Children at home": 0.124,
+            "No children at home": 0.27927927927927926
+          },
+          "selection_rate_ratio": 0.444,
+          "demographic_parity_gap": 0.15527927927927926
+        },
+        {
+          "alpha": 0.2,
+          "f1": 0.6324786324786325,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.124,
+            "No children at home": 0.2702702702702703
+          },
+          "selection_rate_ratio": 0.4588,
+          "demographic_parity_gap": 0.1462702702702703
+        },
+        {
+          "alpha": 0.25,
+          "f1": 0.6379310344827587,
+          "contact_fraction": 0.16620498614958448,
+          "group_selection_rates": {
+            "Children at home": 0.124,
+            "No children at home": 0.26126126126126126
+          },
+          "selection_rate_ratio": 0.4746206896551724,
+          "demographic_parity_gap": 0.13726126126126126
+        },
+        {
+          "alpha": 0.3,
+          "f1": 0.6324786324786325,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.128,
+            "No children at home": 0.26126126126126126
+          },
+          "selection_rate_ratio": 0.48993103448275865,
+          "demographic_parity_gap": 0.13326126126126125
+        },
+        {
+          "alpha": 0.35,
+          "f1": 0.6153846153846154,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.132,
+            "No children at home": 0.25225225225225223
+          },
+          "selection_rate_ratio": 0.5232857142857144,
+          "demographic_parity_gap": 0.12025225225225222
+        },
+        {
+          "alpha": 0.4,
+          "f1": 0.6271186440677966,
+          "contact_fraction": 0.17174515235457063,
+          "group_selection_rates": {
+            "Children at home": 0.136,
+            "No children at home": 0.25225225225225223
+          },
+          "selection_rate_ratio": 0.5391428571428573,
+          "demographic_parity_gap": 0.11625225225225222
+        },
+        {
+          "alpha": 0.45,
+          "f1": 0.6333333333333333,
+          "contact_fraction": 0.1772853185595568,
+          "group_selection_rates": {
+            "Children at home": 0.144,
+            "No children at home": 0.25225225225225223
+          },
+          "selection_rate_ratio": 0.5708571428571428,
+          "demographic_parity_gap": 0.10825225225225224
+        },
+        {
+          "alpha": 0.5,
+          "f1": 0.6333333333333333,
+          "contact_fraction": 0.1772853185595568,
+          "group_selection_rates": {
+            "Children at home": 0.148,
+            "No children at home": 0.24324324324324326
+          },
+          "selection_rate_ratio": 0.6084444444444443,
+          "demographic_parity_gap": 0.09524324324324326
+        },
+        {
+          "alpha": 0.55,
+          "f1": 0.6218487394957983,
+          "contact_fraction": 0.1745152354570637,
+          "group_selection_rates": {
+            "Children at home": 0.148,
+            "No children at home": 0.23423423423423423
+          },
+          "selection_rate_ratio": 0.6318461538461538,
+          "demographic_parity_gap": 0.08623423423423424
+        },
+        {
+          "alpha": 0.6,
+          "f1": 0.6218487394957983,
+          "contact_fraction": 0.1745152354570637,
+          "group_selection_rates": {
+            "Children at home": 0.148,
+            "No children at home": 0.23423423423423423
+          },
+          "selection_rate_ratio": 0.6318461538461538,
+          "demographic_parity_gap": 0.08623423423423424
+        },
+        {
+          "alpha": 0.65,
+          "f1": 0.6271186440677966,
+          "contact_fraction": 0.17174515235457063,
+          "group_selection_rates": {
+            "Children at home": 0.148,
+            "No children at home": 0.22522522522522523
+          },
+          "selection_rate_ratio": 0.6571199999999999,
+          "demographic_parity_gap": 0.07722522522522524
+        },
+        {
+          "alpha": 0.7,
+          "f1": 0.6153846153846154,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.148,
+            "No children at home": 0.21621621621621623
+          },
+          "selection_rate_ratio": 0.6844999999999999,
+          "demographic_parity_gap": 0.06821621621621624
+        },
+        {
+          "alpha": 0.75,
+          "f1": 0.603448275862069,
+          "contact_fraction": 0.16620498614958448,
+          "group_selection_rates": {
+            "Children at home": 0.152,
+            "No children at home": 0.1981981981981982
+          },
+          "selection_rate_ratio": 0.7669090909090909,
+          "demographic_parity_gap": 0.046198198198198204
+        },
+        {
+          "alpha": 0.8,
+          "f1": 0.6086956521739131,
+          "contact_fraction": 0.1634349030470914,
+          "group_selection_rates": {
+            "Children at home": 0.152,
+            "No children at home": 0.1891891891891892
+          },
+          "selection_rate_ratio": 0.8034285714285714,
+          "demographic_parity_gap": 0.0371891891891892
+        },
+        {
+          "alpha": 0.85,
+          "f1": 0.6206896551724138,
+          "contact_fraction": 0.16620498614958448,
+          "group_selection_rates": {
+            "Children at home": 0.16,
+            "No children at home": 0.18018018018018017
+          },
+          "selection_rate_ratio": 0.888,
+          "demographic_parity_gap": 0.02018018018018017
+        },
+        {
+          "alpha": 0.9,
+          "f1": 0.6153846153846154,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.164,
+            "No children at home": 0.18018018018018017
+          },
+          "selection_rate_ratio": 0.9102000000000001,
+          "demographic_parity_gap": 0.016180180180180165
+        },
+        {
+          "alpha": 0.95,
+          "f1": 0.6153846153846154,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.164,
+            "No children at home": 0.18018018018018017
+          },
+          "selection_rate_ratio": 0.9102000000000001,
+          "demographic_parity_gap": 0.016180180180180165
+        },
+        {
+          "alpha": 1.0,
+          "f1": 0.5982905982905983,
+          "contact_fraction": 0.16897506925207756,
+          "group_selection_rates": {
+            "Children at home": 0.168,
+            "No children at home": 0.17117117117117117
+          },
+          "selection_rate_ratio": 0.9814736842105264,
+          "demographic_parity_gap": 0.003171171171171161
+        }
+      ],
+      "status": "target_achieved_on_validation",
+      "unseen_group_handling": "error; manual review or prospectively validated fallback required",
+      "limitation": "Selection parity does not establish equalised odds, causal fairness, or regulatory compliance."
+    },
+    "income_edges": [
+      35129.5,
+      50841.5,
+      67372.0
+    ],
+    "fit_rows": 1428,
+    "validation_rows": 361,
+    "test_rows": 447
+  }
+]
